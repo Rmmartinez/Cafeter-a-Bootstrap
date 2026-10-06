@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,30 +14,31 @@
     <link rel="stylesheet" href="css/estilos-rotos.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header bg-body-tertiary d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 py-3 px-4 sticky-top shadow-sm">
       <a class="logo" href="#inicio">Café Serrano</a>
       <nav class="nav">
-        <ul class="nav-lista">
+        <ul class="nav-lista d-flex gap-3 list-unstyled mb-0">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#productos">Carta</a></li>
           <li><a href="#contacto">Reservas</a></li>
         </ul>
       </nav>
+      <a class="boton px-4 py-2" href="#contacto">Reservar</a>
     </header>
 
     <main>
-      <section class="hero" id="inicio">
+      <section class="hero bg-warning-subtle py-5 px-4" id="inicio">
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-6">
-              <h1 class="hero-titulo">
+              <h1 class="hero-titulo display-4 text-warning-emphasis">
                 Café de especialidad al pie de las sierras
               </h1>
-              <p class="hero-texto">
+              <p class="hero-texto lead text-body-secondary">
                 Granos seleccionados, tostado propio y pastelería casera todos
                 los días.
               </p>
-              <a class="boton" href="#productos">Ver la carta</a>
+              <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
             </div>
             <div class="col-12 col-md-6">
               <img
@@ -50,56 +51,72 @@
         </div>
       </section>
 
-      <section class="seccion" id="productos">
+      <section class="seccion py-5 px-4 bg-light-subtle" id="productos">
         <div class="container">
-          <h2>Nuestra carta</h2>
+          <h2 class="text-primary-emphasis mb-4">Nuestra carta</h2>
           <div class="productos row">
             <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta">
-                <img src="img/taza.svg" alt="Taza de café espresso" />
+              <article class="tarjeta bg-body p-3">
+                <img
+                  class="img-fluid rounded"
+                  src="img/taza.svg"
+                  alt="Taza de café espresso"
+                />
                 <h3>Espresso</h3>
                 <p>Intenso y aromático, con granos de origen colombiano.</p>
-                <p class="precio">$2.500</p>
+                <p class="precio text-success fw-bold">$2.500</p>
               </article>
             </div>
             <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta">
-                <img src="img/taza.svg" alt="Taza de cortado" />
+              <article class="tarjeta bg-body p-3">
+                <img
+                  class="img-fluid rounded"
+                  src="img/taza.svg"
+                  alt="Taza de cortado"
+                />
                 <h3>Cortado</h3>
                 <p>Espresso con un toque de leche cremada.</p>
-                <p class="precio">$2.800</p>
+                <p class="precio text-success fw-bold">$2.800</p>
               </article>
             </div>
             <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta">
-                <img src="img/dulce.svg" alt="Alfajor de maicena" />
+              <article class="tarjeta bg-body p-3">
+                <img
+                  class="img-fluid rounded"
+                  src="img/dulce.svg"
+                  alt="Alfajor de maicena"
+                />
                 <h3>Alfajor de maicena</h3>
                 <p>Receta de la casa, con dulce de leche y coco.</p>
-                <p class="precio">$1.900</p>
+                <p class="precio text-success fw-bold">$1.900</p>
               </article>
             </div>
             <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta">
-                <img src="img/dulce.svg" alt="Medialunas de manteca" />
+              <article class="tarjeta bg-body p-3">
+                <img
+                  class="img-fluid rounded"
+                  src="img/dulce.svg"
+                  alt="Medialunas de manteca"
+                />
                 <h3>Medialunas</h3>
                 <p>Dos medialunas de manteca recién horneadas.</p>
-                <p class="precio">$2.200</p>
+                <p class="precio text-success fw-bold">$2.200</p>
               </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="seccion contacto" id="contacto">
-        <h2>Reservá tu mesa</h2>
+      <section class="seccion py-5 px-4 contacto bg-secondary-subtle" id="contacto">
+        <h2 class="text-secondary-emphasis mb-4">Reservá tu mesa</h2>
         <form class="formulario">
-          <label for="nombre">Nombre</label>
+          <label class="mt-3 mb-1" for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" />
 
-          <label for="correo">Correo electrónico</label>
+          <label class="mt-3 mb-1" for="correo">Correo electrónico</label>
           <input type="email" id="correo" name="correo" />
 
-          <label for="personas">Cantidad de personas</label>
+          <label class="mt-3 mb-1" for="personas">Cantidad de personas</label>
           <select id="personas" name="personas">
             <option>1</option>
             <option selected>2</option>
@@ -107,15 +124,15 @@
             <option>5 o más</option>
           </select>
 
-          <label for="mensaje">Comentarios</label>
+          <label class="mt-3 mb-1" for="mensaje">Comentarios</label>
           <textarea id="mensaje" name="mensaje" rows="4"></textarea>
 
-          <button class="boton" type="submit">Reservar</button>
+          <button class="boton px-4 py-2 mt-3" type="submit">Reservar</button>
         </form>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer bg-dark-subtle text-dark-emphasis py-4 px-4">
       <p>Café Serrano · San Luis, Argentina</p>
       <p>Abierto todos los días de 8 a 20 hs</p>
     </footer>
