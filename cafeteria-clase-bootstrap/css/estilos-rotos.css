@@ -1,0 +1,45 @@
+/* =============================================================
+   Estilos del hero, los botones y el footer · VERSIÓN CORREGIDA
+   Errores originales:
+   1. .hero-titlo  -> .hero-titulo (typo en el selector)
+   2. main .boton tenía border-radius: 0 (más específico que .boton)
+   3. #2B1D14e -> #2B1D14 (hex inválido)
+   ============================================================= */
+
+
+.hero {
+  background-color: var(--color-primario);
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.hero-titulo {
+  color: var(--color-fondo);
+}
+
+.hero-texto {
+  color: var(--color-fondo);
+}
+
+main .boton {
+  padding: 12px 24px;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #2B1D14;
+  color: var(--color-fondo);
+  padding: 24px 32px;
+  text-align: center;
+}

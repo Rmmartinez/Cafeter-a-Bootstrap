@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Café Serrano · Café de especialidad en San Luis</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/estilos-rotos.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#inicio">Café Serrano</a>
+      <nav class="nav">
+        <ul class="nav-lista">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Carta</a></li>
+          <li><a href="#contacto">Reservas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h1 class="hero-titulo">
+                Café de especialidad al pie de las sierras
+              </h1>
+              <p class="hero-texto">
+                Granos seleccionados, tostado propio y pastelería casera todos
+                los días.
+              </p>
+              <a class="boton" href="#productos">Ver la carta</a>
+            </div>
+            <div class="col-12 col-md-6">
+              <img
+                class="hero-imagen"
+                src="./img/taza.svg"
+                alt="Taza de café espresso con crema"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" id="productos">
+        <div class="container">
+          <h2>Nuestra carta</h2>
+          <div class="productos row">
+            <div class="col-12 col-md-4 mt-2">
+              <article class="tarjeta">
+                <img src="img/taza.svg" alt="Taza de café espresso" />
+                <h3>Espresso</h3>
+                <p>Intenso y aromático, con granos de origen colombiano.</p>
+                <p class="precio">$2.500</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <article class="tarjeta">
+                <img src="img/taza.svg" alt="Taza de cortado" />
+                <h3>Cortado</h3>
+                <p>Espresso con un toque de leche cremada.</p>
+                <p class="precio">$2.800</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <article class="tarjeta">
+                <img src="img/dulce.svg" alt="Alfajor de maicena" />
+                <h3>Alfajor de maicena</h3>
+                <p>Receta de la casa, con dulce de leche y coco.</p>
+                <p class="precio">$1.900</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <article class="tarjeta">
+                <img src="img/dulce.svg" alt="Medialunas de manteca" />
+                <h3>Medialunas</h3>
+                <p>Dos medialunas de manteca recién horneadas.</p>
+                <p class="precio">$2.200</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion contacto" id="contacto">
+        <h2>Reservá tu mesa</h2>
+        <form class="formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" />
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" />
+
+          <label for="personas">Cantidad de personas</label>
+          <select id="personas" name="personas">
+            <option>1</option>
+            <option selected>2</option>
+            <option>3 a 4</option>
+            <option>5 o más</option>
+          </select>
+
+          <label for="mensaje">Comentarios</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+          <button class="boton" type="submit">Reservar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Café Serrano · San Luis, Argentina</p>
+      <p>Abierto todos los días de 8 a 20 hs</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
