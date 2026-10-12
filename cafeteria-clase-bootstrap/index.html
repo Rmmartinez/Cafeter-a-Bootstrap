@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,127 +14,549 @@
     <link rel="stylesheet" href="css/estilos-rotos.css" />
   </head>
   <body>
-    <header class="header bg-body-tertiary d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 py-3 px-4 sticky-top shadow-sm">
-      <a class="logo" href="#inicio">Café Serrano</a>
-      <nav class="nav">
-        <ul class="nav-lista d-flex gap-3 list-unstyled mb-0">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#productos">Carta</a></li>
-          <li><a href="#contacto">Reservas</a></li>
-        </ul>
+    <header class="sticky-top shadow-sm">
+      <nav class="navbar navbar-expand-md bg-body-tertiary py-3 px-4">
+        <a class="logo navbar-brand" href="#inicio">Café Serrano</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir o cerrar el menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto align-items-md-center gap-md-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Menú
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#productos">Cafés</a></li>
+                <li>
+                  <a class="dropdown-item" href="#productos">Pastelería</a>
+                </li>
+                <li><a class="dropdown-item" href="#productos">Bebidas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="boton px-4 py-2"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#pedidoOffcanvas"
+                aria-controls="pedidoOffcanvas"
+              >
+                Tu pedido
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="boton px-4 py-2"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#reservaModal"
+              >
+                Reservar
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <a class="boton px-4 py-2" href="#contacto">Reservar</a>
     </header>
 
     <main>
-      <section class="hero bg-warning-subtle py-5 px-4" id="inicio">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <h1 class="hero-titulo display-4 text-warning-emphasis">
-                Café de especialidad al pie de las sierras
-              </h1>
-              <p class="hero-texto lead text-body-secondary">
-                Granos seleccionados, tostado propio y pastelería casera todos
-                los días.
-              </p>
-              <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
+      <section class="hero p-0" id="inicio">
+        <div
+          id="heroCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          aria-label="Café Serrano: café y pastelería"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Diapositiva 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+              aria-label="Diapositiva 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+              aria-label="Diapositiva 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="ratio ratio-21x9">
+                <img
+                  class="object-fit-cover"
+                  src="img/cafe_sin_texto_1_bebida.png"
+                  alt="Café frío con frutillas y crema en un vaso alto, sobre una mesa de mármol."
+                />
+              </div>
+              <div
+                class="carousel-caption text-start top-50 bottom-auto translate-middle-y"
+              >
+                <h1 class="hero-titulo fs-4 fs-md-1">
+                  Café de especialidad al pie de las sierras
+                </h1>
+                <p class="hero-texto lead fs-6 fs-md-5">
+                  Granos seleccionados, tostado propio y pastelería casera todos
+                  los días.
+                </p>
+                <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
+              </div>
             </div>
-            <div class="col-12 col-md-6">
-              <img
-                class="hero-imagen"
-                src="./img/taza.svg"
-                alt="Taza de café espresso con crema"
-              />
+            <div class="carousel-item">
+              <div class="ratio ratio-21x9">
+                <img
+                  class="object-fit-cover"
+                  src="img/cafe_sin_texto_2_pasteleria.png"
+                  alt="Medialuna glaseada con pistachos, budín y un latte con arte de corazón."
+                />
+              </div>
+              <div
+                class="carousel-caption text-start top-50 bottom-auto translate-middle-y"
+              >
+                <h2 class="hero-titulo fs-4 fs-md-1">
+                  Café de especialidad al pie de las sierras
+                </h2>
+                <p class="hero-texto lead fs-6 fs-md-5">
+                  Granos seleccionados, tostado propio y pastelería casera todos
+                  los días.
+                </p>
+                <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="ratio ratio-21x9">
+                <img
+                  class="object-fit-cover"
+                  src="img/cafe_sin_texto_3_local.png"
+                  alt="Interior de la cafetería con torta de frutillas, café con leche y flores sobre una mesa junto a la ventana."
+                />
+              </div>
+              <div
+                class="carousel-caption text-start top-50 bottom-auto translate-middle-y"
+              >
+                <h2 class="hero-titulo fs-4 fs-md-1">
+                  Café de especialidad al pie de las sierras
+                </h2>
+                <p class="hero-texto lead fs-6 fs-md-5">
+                  Granos seleccionados, tostado propio y pastelería casera todos
+                  los días.
+                </p>
+                <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
+              </div>
             </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </section>
 
       <section class="seccion py-5 px-4 bg-light-subtle" id="productos">
         <div class="container">
           <h2 class="text-primary-emphasis mb-4">Nuestra carta</h2>
-          <div class="productos row">
-            <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta bg-body p-3">
-                <img
-                  class="img-fluid rounded"
-                  src="img/taza.svg"
-                  alt="Taza de café espresso"
-                />
-                <h3>Espresso</h3>
-                <p>Intenso y aromático, con granos de origen colombiano.</p>
-                <p class="precio text-success fw-bold">$2.500</p>
-              </article>
+          <ul
+            class="nav nav-pills mb-3"
+            id="categoriasProductos"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="cafes-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#cafes"
+                type="button"
+                role="tab"
+                aria-controls="cafes"
+                aria-selected="true"
+              >
+                Cafés
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pasteleria-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pasteleria"
+                type="button"
+                role="tab"
+                aria-controls="pasteleria"
+                aria-selected="false"
+              >
+                Pastelería
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="bebidas-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bebidas"
+                type="button"
+                role="tab"
+                aria-controls="bebidas"
+                aria-selected="false"
+              >
+                Bebidas
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="categoriasProductosContenido">
+            <div
+              class="tab-pane fade show active"
+              id="cafes"
+              role="tabpanel"
+              aria-labelledby="cafes-tab"
+              tabindex="0"
+            >
+              <div class="productos row">
+                <div class="col-12 col-md-4 mt-2">
+                  <article class="tarjeta bg-body p-3">
+                    <img
+                      class="img-fluid rounded"
+                      src="img/taza.svg"
+                      alt="Taza de café espresso"
+                    />
+                    <h3>Espresso</h3>
+                    <p>Intenso y aromático, con granos de origen colombiano.</p>
+                    <p class="precio text-success fw-bold">$2.500</p>
+                  </article>
+                </div>
+                <div class="col-12 col-md-4 mt-2">
+                  <article class="tarjeta bg-body p-3">
+                    <img
+                      class="img-fluid rounded"
+                      src="img/taza.svg"
+                      alt="Taza de cortado"
+                    />
+                    <h3>Cortado</h3>
+                    <p>Espresso con un toque de leche cremada.</p>
+                    <p class="precio text-success fw-bold">$2.800</p>
+                  </article>
+                </div>
+              </div>
             </div>
-            <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta bg-body p-3">
-                <img
-                  class="img-fluid rounded"
-                  src="img/taza.svg"
-                  alt="Taza de cortado"
-                />
-                <h3>Cortado</h3>
-                <p>Espresso con un toque de leche cremada.</p>
-                <p class="precio text-success fw-bold">$2.800</p>
-              </article>
+            <div
+              class="tab-pane fade"
+              id="pasteleria"
+              role="tabpanel"
+              aria-labelledby="pasteleria-tab"
+              tabindex="0"
+            >
+              <div class="productos row">
+                <div class="col-12 col-md-4 mt-2">
+                  <article class="tarjeta bg-body p-3">
+                    <img
+                      class="img-fluid rounded"
+                      src="img/dulce.svg"
+                      alt="Alfajor de maicena"
+                    />
+                    <h3>Alfajor de maicena</h3>
+                    <p>Receta de la casa, con dulce de leche y coco.</p>
+                    <p class="precio text-success fw-bold">$1.900</p>
+                  </article>
+                </div>
+                <div class="col-12 col-md-4 mt-2">
+                  <article class="tarjeta bg-body p-3">
+                    <img
+                      class="img-fluid rounded"
+                      src="img/dulce.svg"
+                      alt="Medialunas de manteca"
+                    />
+                    <h3>Medialunas</h3>
+                    <p>Dos medialunas de manteca recién horneadas.</p>
+                    <p class="precio text-success fw-bold">$2.200</p>
+                  </article>
+                </div>
+              </div>
             </div>
-            <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta bg-body p-3">
-                <img
-                  class="img-fluid rounded"
-                  src="img/dulce.svg"
-                  alt="Alfajor de maicena"
-                />
-                <h3>Alfajor de maicena</h3>
-                <p>Receta de la casa, con dulce de leche y coco.</p>
-                <p class="precio text-success fw-bold">$1.900</p>
-              </article>
-            </div>
-            <div class="col-12 col-md-4 mt-2">
-              <article class="tarjeta bg-body p-3">
-                <img
-                  class="img-fluid rounded"
-                  src="img/dulce.svg"
-                  alt="Medialunas de manteca"
-                />
-                <h3>Medialunas</h3>
-                <p>Dos medialunas de manteca recién horneadas.</p>
-                <p class="precio text-success fw-bold">$2.200</p>
-              </article>
+            <div
+              class="tab-pane fade"
+              id="bebidas"
+              role="tabpanel"
+              aria-labelledby="bebidas-tab"
+              tabindex="0"
+            >
+              <p class="text-body-secondary mt-3">
+                Todavía no hay bebidas cargadas.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="seccion py-5 px-4 contacto bg-secondary-subtle" id="contacto">
-        <h2 class="text-secondary-emphasis mb-4">Reservá tu mesa</h2>
-        <form class="formulario">
-          <label class="mt-3 mb-1" for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" />
+      <section
+        class="seccion py-5 px-4 contacto bg-secondary-subtle"
+        id="contacto"
+      >
+        <div class="container">
+          <h2 class="text-secondary-emphasis mb-4">Reservá tu mesa</h2>
+          <div class="row">
+            <form class="col-12 col-md-8 col-lg-6" novalidate>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Nombre"
+                  required
+                />
+                <label for="nombre">Nombre</label>
+                <div class="invalid-feedback">Ingresá tu nombre.</div>
+              </div>
 
-          <label class="mt-3 mb-1" for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" />
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="Correo electrónico"
+                  required
+                />
+                <label for="correo">Correo electrónico</label>
+                <div class="invalid-feedback">
+                  Ingresá un correo electrónico válido.
+                </div>
+              </div>
 
-          <label class="mt-3 mb-1" for="personas">Cantidad de personas</label>
-          <select id="personas" name="personas">
-            <option>1</option>
-            <option selected>2</option>
-            <option>3 a 4</option>
-            <option>5 o más</option>
-          </select>
+              <div class="mb-3">
+                <label class="form-label" for="telefono">Teléfono</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="telefonoPrefijo">+54</span>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="telefono"
+                    placeholder="Teléfono"
+                    name="telefono"
+                    pattern="[0-9]{10}"
+                    aria-describedby="telefonoPrefijo"
+                  />
+                  <div class="invalid-feedback">
+                    Ingresá 10 dígitos sin el prefijo +54.
+                  </div>
+                </div>
+              </div>
 
-          <label class="mt-3 mb-1" for="mensaje">Comentarios</label>
-          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+              <div class="mb-3">
+                <label class="form-label" for="personas">
+                  Cantidad de personas
+                </label>
+                <select
+                  class="form-select"
+                  id="personas"
+                  name="personas"
+                  required
+                >
+                  <option>1</option>
+                  <option selected>2</option>
+                  <option>3 a 4</option>
+                  <option>5 o más</option>
+                </select>
+              </div>
 
-          <button class="boton px-4 py-2 mt-3" type="submit">Reservar</button>
-        </form>
+              <div class="mb-3">
+                <label class="form-label" for="mensaje">Comentarios</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  minlength="5"
+                ></textarea>
+                <div class="invalid-feedback">
+                  Si agregás un comentario, escribí al menos 5 caracteres.
+                </div>
+              </div>
+
+              <button class="boton px-4 py-2 mt-3" type="submit">
+                Reservar
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
+    <div
+      class="modal fade"
+      id="reservaModal"
+      tabindex="-1"
+      aria-labelledby="reservaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="reservaModalLabel">
+              Reservá tu mesa
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <form novalidate>
+            <div class="modal-body">
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="reservaNombre"
+                  name="nombre"
+                  placeholder="Nombre"
+                  required
+                />
+                <label for="reservaNombre">Nombre</label>
+                <div class="invalid-feedback">Ingresá tu nombre.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  type="email"
+                  id="reservaCorreo"
+                  name="correo"
+                  placeholder="Correo electrónico"
+                  required
+                />
+                <label for="reservaCorreo">Correo electrónico</label>
+                <div class="invalid-feedback">
+                  Ingresá un correo electrónico válido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="reservaTelefono">
+                  Teléfono
+                </label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="reservaTelefonoPrefijo">
+                    +54
+                  </span>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="reservaTelefono"
+                    name="telefono"
+                    pattern="[0-9]{10}"
+                    aria-describedby="reservaTelefonoPrefijo"
+                  />
+                  <div class="invalid-feedback">
+                    Ingresá 10 dígitos sin el prefijo +54.
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label class="form-label" for="reservaPersonas">
+                  Cantidad de personas
+                </label>
+                <select
+                  class="form-select"
+                  id="reservaPersonas"
+                  name="personas"
+                  required
+                >
+                  <option>1</option>
+                  <option selected>2</option>
+                  <option>3 a 4</option>
+                  <option>5 o más</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="boton px-4 py-2" type="submit">
+                Enviar solicitud
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="pedidoOffcanvas"
+      aria-labelledby="pedidoOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title h5" id="pedidoOffcanvasLabel">Tu pedido</h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="text-body-secondary">Todavía no agregaste productos.</p>
+      </div>
+    </div>
+
     <footer class="footer bg-dark-subtle text-dark-emphasis py-4 px-4">
       <p>Café Serrano · San Luis, Argentina</p>
-      <p>Abierto todos los días de 8 a 20 hs</p>
+      <button
+        class="btn btn-link link-light p-0 text-decoration-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#horariosLocal"
+        aria-expanded="false"
+        aria-controls="horariosLocal"
+      >
+        Horarios del local
+      </button>
+      <div class="collapse" id="horariosLocal">
+        <p class="mt-2 mb-0">Abierto todos los días de 8 a 20 hs</p>
+      </div>
     </footer>
 
     <script
@@ -142,5 +564,15 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.querySelectorAll("form[novalidate]").forEach((form) => {
+        form.addEventListener("submit", (e) => {
+          if (!form.checkValidity()) {
+            e.preventDefault();
+          }
+          form.classList.add("was-validated");
+        });
+      });
+    </script>
   </body>
 </html>
