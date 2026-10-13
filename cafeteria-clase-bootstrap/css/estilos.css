@@ -239,3 +239,8 @@ h1, h2, h3 {
   color: var(--color-fondo) !important;
   background-color: var(--color-primario) !important;
 }
+
+/* Texto del carousel: sombra para que se lea mejor */
+.carousel-caption {
+  text-shadow: 0 2px 6px rgba(74, 44, 34, 0.8);
+}
