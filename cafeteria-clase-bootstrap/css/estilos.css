@@ -140,3 +140,86 @@ h1, h2, h3 {
     flex-direction: row;
   }
 }
+
+/* ---------- 7. Paleta rosa, marrón y crema ---------- */
+/* Pisa los colores de Bootstrap.
+   Usamos !important */
+:root {
+  --color-primario: #7A4A3A;    /* marrón chocolate */
+  --color-secundario: #E8A0B4;  /* rosa */
+  --color-rosa-oscuro: #C96B87; /* rosa intenso */
+  --color-rosa-claro: #FBE4EA;  /* rosa muy suave */
+  --color-fondo: #FFF8F3;       /* crema */
+  --color-texto: #4A2C22;       /* marrón oscuro */
+}
+
+/* Navbar */
+.bg-body-tertiary {
+  background-color: var(--color-rosa-claro) !important;
+}
+
+/* Botones */
+.btn-warning {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--color-rosa-oscuro);
+  --bs-btn-border-color: var(--color-rosa-oscuro);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--color-primario);
+  --bs-btn-hover-border-color: var(--color-primario);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--color-primario);
+  --bs-btn-active-border-color: var(--color-primario);
+}
+
+/* Pills */
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--color-rosa-oscuro);
+  --bs-nav-link-color: var(--color-primario);
+  --bs-nav-link-hover-color: var(--color-rosa-oscuro);
+}
+
+/* Fondos de las secciones */
+.bg-light-subtle {
+  background-color: var(--color-fondo) !important;
+}
+
+.bg-secondary-subtle {
+  background-color: var(--color-rosa-claro) !important;
+}
+
+/* Títulos */
+.text-primary-emphasis,
+.text-secondary-emphasis {
+  color: var(--color-primario) !important;
+}
+
+/* Precios */
+.text-success {
+  color: var(--color-rosa-oscuro) !important;
+}
+
+/* Badge "Promo" */
+.text-bg-warning {
+  color: var(--color-primario) !important;
+  background-color: var(--color-secundario) !important;
+}
+
+/* Footer y card de horarios */
+.bg-dark {
+  background-color: var(--color-primario) !important;
+}
+
+.btn-outline-light {
+  --bs-btn-hover-color: var(--color-primario);
+}
+
+/* Bordes de las tarjetas y foco de los campos */
+.tarjeta {
+  border-color: var(--color-secundario);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 0 0.25rem rgba(232, 160, 180, 0.35);
+}
