@@ -151,6 +151,7 @@ h1, h2, h3 {
   --color-rosa-claro: #FBE4EA;  /* rosa muy suave */
   --color-fondo: #FFF8F3;       /* crema */
   --color-texto: #4A2C22;       /* marrón oscuro */
+  --color-latte: #E9D5C3;       /* marrón con leche */
 }
 
 /* Navbar */
@@ -184,7 +185,7 @@ h1, h2, h3 {
 }
 
 .bg-secondary-subtle {
-  background-color: var(--color-rosa-claro) !important;
+  background-color: var(--color-latte) !important;
 }
 
 /* Títulos */
@@ -198,12 +199,6 @@ h1, h2, h3 {
   color: var(--color-rosa-oscuro) !important;
 }
 
-/* Badge "Promo" */
-.text-bg-warning {
-  color: var(--color-primario) !important;
-  background-color: var(--color-secundario) !important;
-}
-
 /* Footer y card de horarios */
 .bg-dark {
   background-color: var(--color-primario) !important;
@@ -215,11 +210,32 @@ h1, h2, h3 {
 
 /* Bordes de las tarjetas y foco de los campos */
 .tarjeta {
-  border-color: var(--color-secundario);
+  border-color: var(--color-latte);
 }
 
 .form-control:focus,
 .form-select:focus {
   border-color: var(--color-secundario);
   box-shadow: 0 0 0 0.25rem rgba(232, 160, 180, 0.35);
+}
+
+/* Links del navbar, campos del formulario y badge */
+.navbar .nav-link {
+  color: var(--color-primario);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--color-rosa-oscuro);
+}
+
+.input-group-text {
+  background-color: var(--color-rosa-claro);
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+.text-bg-warning {
+  color: var(--color-fondo) !important;
+  background-color: var(--color-primario) !important;
 }
