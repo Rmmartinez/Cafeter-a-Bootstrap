@@ -11,188 +11,127 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/estilos.css" />
-    <link rel="stylesheet" href="css/estilos-rotos.css" />
   </head>
   <body>
     <header class="sticky-top shadow-sm">
-      <nav class="navbar navbar-expand-md bg-body-tertiary py-3 px-4">
-        <a class="logo navbar-brand" href="#inicio">Café Serrano</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menuPrincipal"
-          aria-controls="menuPrincipal"
-          aria-expanded="false"
-          aria-label="Abrir o cerrar el menú"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menuPrincipal">
-          <ul class="navbar-nav ms-auto align-items-md-center gap-md-3">
-            <li class="nav-item">
-              <a class="nav-link" href="#inicio">Inicio</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Menú
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#productos">Cafés</a></li>
-                <li>
-                  <a class="dropdown-item" href="#productos">Pastelería</a>
-                </li>
-                <li><a class="dropdown-item" href="#productos">Bebidas</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacto">Reservas</a>
-            </li>
-            <li class="nav-item">
-              <button
-                class="boton px-4 py-2"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#pedidoOffcanvas"
-                aria-controls="pedidoOffcanvas"
-              >
-                Tu pedido
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="boton px-4 py-2"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#reservaModal"
-              >
-                Reservar
-              </button>
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container">
+          <a class="logo navbar-brand" href="#inicio">Café Serrano</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir o cerrar el menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto align-items-md-center gap-md-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#inicio">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Menú
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#productos">Cafés</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#productos">Pastelería</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#productos">Bebidas</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Reservas</a>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn btn-warning px-4 py-2"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#pedidoOffcanvas"
+                  aria-controls="pedidoOffcanvas"
+                >
+                  Tu pedido
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn btn-warning px-4 py-2"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#reservaModal"
+                >
+                  Reservar
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero p-0" id="inicio">
-        <div
-          id="heroCarousel"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          aria-label="Café Serrano: café y pastelería"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#heroCarousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Diapositiva 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#heroCarousel"
-              data-bs-slide-to="1"
-              aria-label="Diapositiva 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#heroCarousel"
-              data-bs-slide-to="2"
-              aria-label="Diapositiva 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="ratio ratio-21x9">
-                <img
-                  class="object-fit-cover"
-                  src="img/cafe_sin_texto_1_bebida.png"
-                  alt="Café frío con frutillas y crema en un vaso alto, sobre una mesa de mármol."
-                />
+      <section id="inicio">
+        <h1 class="visually-hidden">Café Serrano</h1>
+        <div class="container my-4">
+          <div class="col-lg-8 mx-auto">
+            <div id="heroCarousel" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/cafe_sin_texto_1_bebida.png"
+                    class="d-block w-100 rounded"
+                    alt="Café frío con frutillas y crema en un vaso alto, sobre una mesa de mármol."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/cafe_sin_texto_2_pasteleria.png"
+                    class="d-block w-100 rounded"
+                    alt="Medialuna glaseada con pistachos, budín y un latte con arte de corazón."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/cafe_sin_texto_3_local.png"
+                    class="d-block w-100 rounded"
+                    alt="Interior de la cafetería con torta de frutillas, café con leche y flores sobre una mesa junto a la ventana."
+                  />
+                </div>
               </div>
-              <div
-                class="carousel-caption text-start top-50 bottom-auto translate-middle-y"
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="prev"
               >
-                <h1 class="hero-titulo fs-4">
-                  Café de especialidad al pie de las sierras
-                </h1>
-                <p class="hero-texto lead fs-6">
-                  Granos seleccionados, tostado propio y pastelería casera todos
-                  los días.
-                </p>
-                <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="ratio ratio-21x9">
-                <img
-                  class="object-fit-cover"
-                  src="img/cafe_sin_texto_2_pasteleria.png"
-                  alt="Medialuna glaseada con pistachos, budín y un latte con arte de corazón."
-                />
-              </div>
-              <div
-                class="carousel-caption text-start top-50 bottom-auto translate-middle-y"
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="next"
               >
-                <h2 class="hero-titulo fs-4">
-                  Café de especialidad al pie de las sierras
-                </h2>
-                <p class="hero-texto lead fs-6">
-                  Granos seleccionados, tostado propio y pastelería casera todos
-                  los días.
-                </p>
-                <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="ratio ratio-21x9">
-                <img
-                  class="object-fit-cover"
-                  src="img/cafe_sin_texto_3_local.png"
-                  alt="Interior de la cafetería con torta de frutillas, café con leche y flores sobre una mesa junto a la ventana."
-                />
-              </div>
-              <div
-                class="carousel-caption text-start top-50 bottom-auto translate-middle-y"
-              >
-                <h2 class="hero-titulo fs-4">
-                  Café de especialidad al pie de las sierras
-                </h2>
-                <p class="hero-texto lead fs-6">
-                  Granos seleccionados, tostado propio y pastelería casera todos
-                  los días.
-                </p>
-                <a class="boton px-4 py-2" href="#productos">Ver la carta</a>
-              </div>
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
         </div>
       </section>
 
@@ -255,7 +194,7 @@
               aria-labelledby="cafes-tab"
               tabindex="0"
             >
-              <div class="productos row">
+              <div class="row">
                 <div class="col-12 col-md-4 mt-2">
                   <article class="tarjeta bg-body p-3">
                     <img
@@ -289,7 +228,7 @@
               aria-labelledby="pasteleria-tab"
               tabindex="0"
             >
-              <div class="productos row">
+              <div class="row">
                 <div class="col-12 col-md-4 mt-2">
                   <article class="tarjeta bg-body p-3">
                     <img
@@ -311,7 +250,7 @@
                     />
                     <h3>Medialunas</h3>
                     <p>Dos medialunas de manteca recién horneadas.</p>
-                    <p class="precio text-success fw-bold">$2.200</p>
+                    <p class="precio text-success fw-bold">$2.200 <span class="badge rounded-pill text-bg-warning">Promo</span></p>
                   </article>
                 </div>
               </div>
@@ -331,10 +270,7 @@
         </div>
       </section>
 
-      <section
-        class="seccion py-5 px-4 contacto bg-secondary-subtle"
-        id="contacto"
-      >
+      <section class="seccion py-5 px-4 bg-secondary-subtle" id="contacto">
         <div class="container">
           <h2 class="text-secondary-emphasis mb-4">Reservá tu mesa</h2>
           <div class="row">
@@ -396,11 +332,15 @@
                   name="personas"
                   required
                 >
+                  <option value="">Elegí una opción…</option>
                   <option>1</option>
-                  <option selected>2</option>
+                  <option>2</option>
                   <option>3 a 4</option>
                   <option>5 o más</option>
                 </select>
+                <div class="invalid-feedback">
+                  Elegí la cantidad de personas.
+                </div>
               </div>
 
               <div class="mb-3">
@@ -417,7 +357,7 @@
                 </div>
               </div>
 
-              <button class="boton px-4 py-2 mt-3" type="submit">
+              <button class="btn btn-warning px-4 py-2 mt-3" type="submit">
                 Reservar
               </button>
             </form>
@@ -505,15 +445,19 @@
                   name="personas"
                   required
                 >
+                  <option value="">Elegí una opción…</option>
                   <option>1</option>
-                  <option selected>2</option>
+                  <option>2</option>
                   <option>3 a 4</option>
                   <option>5 o más</option>
                 </select>
+                <div class="invalid-feedback">
+                  Elegí la cantidad de personas.
+                </div>
               </div>
             </div>
             <div class="modal-footer">
-              <button class="boton px-4 py-2" type="submit">
+              <button class="btn btn-warning px-4 py-2" type="submit">
                 Enviar solicitud
               </button>
             </div>
@@ -542,10 +486,10 @@
       </div>
     </div>
 
-    <footer class="footer bg-dark-subtle text-dark-emphasis py-4 px-4">
+    <footer class="bg-dark text-light text-center py-4 px-4">
       <p>Café Serrano · San Luis, Argentina</p>
       <button
-        class="btn btn-link link-light p-0 text-decoration-none"
+        class="btn btn-outline-light"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#horariosLocal"
@@ -554,8 +498,8 @@
       >
         Horarios del local
       </button>
-      <div class="collapse" id="horariosLocal">
-        <p class="mt-2 mb-0">Abierto todos los días de 8 a 20 hs</p>
+      <div class="collapse mt-2" id="horariosLocal">
+        <div class="card card-body bg-dark text-light border-secondary">Abierto todos los días de 8 a 20 hs</div>
       </div>
     </footer>
 
